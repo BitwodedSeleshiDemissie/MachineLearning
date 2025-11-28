@@ -1,12 +1,13 @@
-import requests
 from dotenv import load_dotenv
-from langchain.chat_models import init_chat_model
-load_dotenv
-model = init_chat_model(
-    model = 'gpt-4o-mini',
+from langchain_openai import ChatOpenAI
 
-    temprature = 0.1
+# Load variables from .env (expects OPENAI_API_KEY)
+load_dotenv()
+
+model = ChatOpenAI(
+    model="gpt-4o-mini",
+    temperature=0.1,
 )
-response = model.invoke('tell me why math is great!')
-print(response)
+
+response = model.invoke("Tell me why math is great!")
 print(response.content)
