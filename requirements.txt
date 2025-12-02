@@ -1,7 +1,12 @@
 ipython
 ipykernel
 jupyter
+langchain
+langchain-openai
+langgraph
 matplotlib
 numpy
 pydot
+python-dotenv
+requests
 scikit-learn
